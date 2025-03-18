@@ -5,16 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Forum</h1>
-        <input type="text" id="pseudo" placeholder="Choisis un pseudo" oninput="verifierPseudo()">
-        <input type="password" id="password" placeholder="Mot de passe" style="display: none;">
-        <div id="forum"></div>
-        <textarea id="message" placeholder="Écris ton message..."></textarea>
-        <button onclick="ajouterMessage()">Envoyer</button>
+
+        <!-- Formulaire de connexion -->
+        <div id="login-form">
+            <input type="text" id="login-username" placeholder="Nom d'utilisateur">
+            <input type="password" id="login-password" placeholder="Mot de passe">
+            <button onclick="login()">Se connecter</button>
+            <button onclick="showSignup()">Créer un compte</button>
+        </div>
+
+        <!-- Formulaire d'inscription (caché au début) -->
+        <div id="signup-form" style="display: none;">
+            <input type="text" id="signup-username" placeholder="Nom d'utilisateur">
+            <input type="password" id="signup-password" placeholder="Mot de passe">
+            <button onclick="signup()">S'inscrire</button>
+            <button onclick="showLogin()">Retour</button>
+        </div>
+
+        <!-- Forum (affiché après connexion) -->
+        <div id="forum-section" style="display: none;">
+            <h2>Bienvenue, <span id="user-name"></span>!</h2>
+            <div id="forum"></div>
+            <textarea id="message" placeholder="Écris ton message..."></textarea>
+            <button onclick="ajouterMessage()">Envoyer</button>
+            <button onclick="logout()">Se déconnecter</button>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
