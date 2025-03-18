@@ -1,56 +1,94 @@
+/* Design encore plus futuriste et élégant */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
     text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
-
-.pseudo {
-    font-weight: bold;
-    color: blue;
-}
-
-.admin {
-    color: red !important;
-}
-
 
 .container {
-    width: 50%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px gray;
-    border-radius: 10px;
+    width: 60%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #forum {
     text-align: left;
     margin-bottom: 20px;
-    max-height: 300px;
+    max-height: 500px;
     overflow-y: auto;
-    border: 1px solid #ddd;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.message {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.message:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.pseudo {
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 0px 0px 15px cyan, 0px 0px 30px blue;
+}
+
+.admin {
+    color: red !important;
+    text-shadow: 0px 0px 20px red, 0px 0px 40px darkred;
 }
 
 input, textarea {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 12px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
 }
 
 button {
-    padding: 10px 20px;
-    background: blue;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-
-.message {
-    border-bottom: 1px solid #ddd;
-    padding: 5px;
-}
-.pseudo {
-    font-weight: bold;
-    color: blue;
+button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.08);
+    box-shadow: 0px 8px 25px rgba(255, 75, 43, 0.7);
 }
