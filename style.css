@@ -4,6 +4,16 @@ body {
     text-align: center;
 }
 
+.pseudo {
+    font-weight: bold;
+    color: blue;
+}
+
+.admin {
+    color: red !important;
+}
+
+
 .container {
     width: 50%;
     margin: auto;
